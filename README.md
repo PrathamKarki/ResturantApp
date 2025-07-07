@@ -19,19 +19,19 @@ A responsive Vue.js application for browsing a restaurant's food menu, viewing i
   - [X] Setup project structure (components, assets, router, etc.)
   - [X] Add Tailwind CSS for styling
 
-- [ ] **Load JSON Data (Local)**
-  - [ ] Create local JSON file for menu data
-  - [ ] Load & parse JSON data in the app
+- [X] **Load JSON Data (Local)**
+  - [X] Create local JSON file for menu data
+  - [X] Load & parse JSON data in the app
 
-- [ ] **Home/Menu Screen**
-  - [ ] Sticky category navigation bar (e.g., Starters, PERi-PERi Chicken)
-  - [ ] Render section headers for categories
-  - [ ] Display menu item cards
-    - [ ] Image
-    - [ ] Name
-    - [ ] Calorie count
-    - [ ] Short description
-    - [ ] Price
+- [X] **Home/Menu Screen**
+  - [X] Sticky category navigation bar (e.g., Starters, PERi-PERi Chicken)
+  - [X] Render section headers for categories
+  - [X] Display menu item cards
+    - [X] Image
+    - [X] Name
+    - [X] Calorie count
+    - [X] Short description
+    - [X] Price
 
 - [ ] **Detailed Item View (Route/Pop-up)**
   - [ ] Show large product image
