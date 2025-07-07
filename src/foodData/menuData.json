@@ -1,0 +1,122 @@
+{
+  "categories": [
+   {
+     "id": "cat_1",
+     "name": "PERi-PERi Chicken",
+     "slug": "peri-peri-chicken",
+     "items": [
+       {
+         "id": 101,
+         "name": "Double Chicken Wrap",
+         "description": "Two chicken breasts grilled in your favourite spice. Served in a wrap with lettuce, lightly spiced yoghurt mayo and chilli jam.",
+         "image_url": "https://placehold.co/600x400/FFC20E/000000?text=Chicken+Wrap",
+         "base_price": 12.50,
+         "calories": 894,
+         "tags": ["new"],
+         "customization_options": [
+           {
+             "id": "opt_spice",
+             "title": "How spicy?",
+             "type": "single",
+             "choices": [
+               {
+                 "id": "spice_extra_hot",
+                 "name": "Extra Hot",
+                 "description": "A sizzling hot spice, and then some.",
+                 "price_modifier": 0.00,
+                 "calories": 82
+               },
+               {
+                 "id": "spice_hot",
+                 "name": "Hot",
+                 "description": "Tongue-tingling heat, not for the faint hearted.",
+                 "price_modifier": 0.00,
+                 "calories": 41
+               },
+               {
+                 "id": "spice_medium",
+                 "name": "Medium",
+                 "description": "Heaps of flavour with just a flicker of fire.",
+                 "price_modifier": 0.00,
+                 "calories": 21
+               },
+               {
+                 "id": "spice_lemon_herb",
+                 "name": "Lemon & Herb",
+                 "description": "Zesty and tangy. A tastebud teaser.",
+                 "price_modifier": 0.00,
+                 "calories": 10
+               }
+             ]
+           },
+           {
+             "id": "opt_sides",
+             "title": "Choose your side",
+             "type": "single",
+             "choices": [
+               {
+                 "id": "side_chips",
+                 "name": "PERi-Salted Chips",
+                 "description": "Our famous, crispy chips.",
+                 "price_modifier": 0.00,
+                 "calories": 372
+               },
+               {
+                 "id": "side_rice",
+                 "name": "Spicy Rice",
+                 "description": "Fluffy, spicy rice.",
+                 "price_modifier": 0.00,
+                 "calories": 225
+               },
+               {
+                 "id": "side_summer_grains",
+                 "name": "Regular Summer Grains",
+                 "description": "A light and healthy option.",
+                 "price_modifier": 1.50,
+                 "calories": 180
+               }
+             ]
+           }
+         ]
+       }
+     ]
+   },
+   {
+     "id": "cat_2",
+     "name": "Starters",
+     "slug": "starters",
+     "items": [
+       {
+         "id": 201,
+         "name": "Halloumi Sticks & PERi-Honey",
+         "description": "Five chunky sticks of grilled halloumi with our PERi-Honey for dipping.",
+         "image_url": "https://placehold.co/600x400/E5262C/FFFFFF?text=Halloumi",
+         "base_price": 4.95,
+         "calories": 526,
+         "tags": ["vegetarian", "new"],
+         "customization_options": []
+       },
+       {
+         "id": 202,
+         "name": "Dare to share",
+         "description": "Choose any three starters to share. Perfect for groups.",
+         "image_url": "https://placehold.co/600x400/FAD304/000000?text=Sharing",
+         "base_price": 11.75,
+         "calories": 0,
+         "tags": [],
+         "customization_options": []
+       }
+     ]
+   },
+   {
+     "id": "cat_3",
+     "name": "Burgers, Pittas, Wraps",
+     "slug": "burgers-pittas-wraps",
+     "items": [
+      {
+        
+      }
+     ]
+   }
+ ]
+}
