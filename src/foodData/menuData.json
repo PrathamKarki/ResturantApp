@@ -1,122 +1,369 @@
 {
   "categories": [
-   {
-     "id": "cat_1",
-     "name": "PERi-PERi Chicken",
-     "slug": "peri-peri-chicken",
-     "items": [
-       {
-         "id": 101,
-         "name": "Double Chicken Wrap",
-         "description": "Two chicken breasts grilled in your favourite spice. Served in a wrap with lettuce, lightly spiced yoghurt mayo and chilli jam.",
-         "image_url": "https://placehold.co/600x400/FFC20E/000000?text=Chicken+Wrap",
-         "base_price": 12.50,
-         "calories": 894,
-         "tags": ["new"],
-         "customization_options": [
-           {
-             "id": "opt_spice",
-             "title": "How spicy?",
-             "type": "single",
-             "choices": [
-               {
-                 "id": "spice_extra_hot",
-                 "name": "Extra Hot",
-                 "description": "A sizzling hot spice, and then some.",
-                 "price_modifier": 0.00,
-                 "calories": 82
-               },
-               {
-                 "id": "spice_hot",
-                 "name": "Hot",
-                 "description": "Tongue-tingling heat, not for the faint hearted.",
-                 "price_modifier": 0.00,
-                 "calories": 41
-               },
-               {
-                 "id": "spice_medium",
-                 "name": "Medium",
-                 "description": "Heaps of flavour with just a flicker of fire.",
-                 "price_modifier": 0.00,
-                 "calories": 21
-               },
-               {
-                 "id": "spice_lemon_herb",
-                 "name": "Lemon & Herb",
-                 "description": "Zesty and tangy. A tastebud teaser.",
-                 "price_modifier": 0.00,
-                 "calories": 10
-               }
-             ]
-           },
-           {
-             "id": "opt_sides",
-             "title": "Choose your side",
-             "type": "single",
-             "choices": [
-               {
-                 "id": "side_chips",
-                 "name": "PERi-Salted Chips",
-                 "description": "Our famous, crispy chips.",
-                 "price_modifier": 0.00,
-                 "calories": 372
-               },
-               {
-                 "id": "side_rice",
-                 "name": "Spicy Rice",
-                 "description": "Fluffy, spicy rice.",
-                 "price_modifier": 0.00,
-                 "calories": 225
-               },
-               {
-                 "id": "side_summer_grains",
-                 "name": "Regular Summer Grains",
-                 "description": "A light and healthy option.",
-                 "price_modifier": 1.50,
-                 "calories": 180
-               }
-             ]
-           }
-         ]
-       }
-     ]
-   },
-   {
-     "id": "cat_2",
-     "name": "Starters",
-     "slug": "starters",
-     "items": [
-       {
-         "id": 201,
-         "name": "Halloumi Sticks & PERi-Honey",
-         "description": "Five chunky sticks of grilled halloumi with our PERi-Honey for dipping.",
-         "image_url": "https://placehold.co/600x400/E5262C/FFFFFF?text=Halloumi",
-         "base_price": 4.95,
-         "calories": 526,
-         "tags": ["vegetarian", "new"],
-         "customization_options": []
-       },
-       {
-         "id": 202,
-         "name": "Dare to share",
-         "description": "Choose any three starters to share. Perfect for groups.",
-         "image_url": "https://placehold.co/600x400/FAD304/000000?text=Sharing",
-         "base_price": 11.75,
-         "calories": 0,
-         "tags": [],
-         "customization_options": []
-       }
-     ]
-   },
-   {
-     "id": "cat_3",
-     "name": "Burgers, Pittas, Wraps",
-     "slug": "burgers-pittas-wraps",
-     "items": [
-      {
-        
-      }
-     ]
-   }
- ]
+    {
+      "id": "cat_1",
+      "name": "PERi-PERi Chicken",
+      "slug": "peri-peri-chicken",
+      "items": [
+        {
+          "id": 101,
+          "name": "Double Chicken Wrap",
+          "description": "Two chicken breasts grilled in your favourite spice. Served in a wrap with lettuce, lightly spiced yoghurt mayo and chilli jam.",
+          "image_url": "https://nandomenus.co.uk/wp-content/uploads/2024/02/double-chicken-wrap-37.Image-16-9.141423.webp",
+          "base_price": 12.50,
+          "calories": 894,
+          "tags": ["new"],
+          "customization_options": [
+            {
+              "id": "opt_spice",
+              "title": "How spicy?",
+              "type": "single",
+              "choices": [
+                {
+                  "id": "spice_extra_hot",
+                  "name": "Extra Hot",
+                  "description": "A sizzling hot spice, and then some.",
+                  "price_modifier": 0.00,
+                  "calories": 82
+                },
+                {
+                  "id": "spice_hot",
+                  "name": "Hot",
+                  "description": "Tongue-tingling heat, not for the faint hearted.",
+                  "price_modifier": 0.00,
+                  "calories": 41
+                },
+                {
+                  "id": "spice_medium",
+                  "name": "Medium",
+                  "description": "Heaps of flavour with just a flicker of fire.",
+                  "price_modifier": 0.00,
+                  "calories": 21
+                },
+                {
+                  "id": "spice_lemon_herb",
+                  "name": "Lemon & Herb",
+                  "description": "Zesty and tangy. A tastebud teaser.",
+                  "price_modifier": 0.00,
+                  "calories": 10
+                }
+              ]
+            },
+            {
+              "id": "opt_sides",
+              "title": "Choose your side",
+              "type": "single",
+              "choices": [
+                {
+                  "id": "side_chips",
+                  "name": "PERi-Salted Chips",
+                  "description": "Our famous, crispy chips.",
+                  "price_modifier": 0.00,
+                  "calories": 372
+                },
+                {
+                  "id": "side_rice",
+                  "name": "Spicy Rice",
+                  "description": "Fluffy, spicy rice.",
+                  "price_modifier": 0.00,
+                  "calories": 225
+                },
+                {
+                  "id": "side_summer_grains",
+                  "name": "Regular Summer Grains",
+                  "description": "A light and healthy option.",
+                  "price_modifier": 1.50,
+                  "calories": 180
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 102,
+          "name": "Whole PERi-PERi Chicken",
+          "description": "A whole succulent chicken, flame-grilled to perfection in your chosen spice.",
+          "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT26iPYnE0aonQydP54sUVgJaeSqI4CPYUHjQ&s",
+          "base_price": 22.95,
+          "calories": 1400,
+          "tags": ["signature"],
+          "customization_options": [
+            {
+              "id": "opt_spice",
+              "title": "How spicy?",
+              "type": "single",
+              "choices": [
+                { "id": "spice_extra_hot", "name": "Extra Hot", "description": "A sizzling hot spice, and then some.", "price_modifier": 0.00, "calories": 82 },
+                { "id": "spice_hot", "name": "Hot", "description": "Tongue-tingling heat, not for the faint hearted.", "price_modifier": 0.00, "calories": 41 },
+                { "id": "spice_medium", "name": "Medium", "description": "Heaps of flavour with just a flicker of fire.", "price_modifier": 0.00, "calories": 21 },
+                { "id": "spice_lemon_herb", "name": "Lemon & Herb", "description": "Zesty and tangy. A tastebud teaser.", "price_modifier": 0.00, "calories": 10 }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 103,
+          "name": "Half Chicken with 2 Sides",
+          "description": "A classic half PERi-PERi chicken served with your choice of two delicious regular sides.",
+          "image_url": "https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/eagvfbur/2fc5c031-29c9-4e8a-b9f2-5f5a27fda9a9.jpg",
+          "base_price": 16.75,
+          "calories": 950,
+          "tags": [],
+          "customization_options": [
+            {
+              "id": "opt_spice",
+              "title": "How spicy?",
+              "type": "single",
+              "choices": [
+                { "id": "spice_extra_hot", "name": "Extra Hot", "description": "A sizzling hot spice, and then some.", "price_modifier": 0.00, "calories": 82 },
+                { "id": "spice_hot", "name": "Hot", "description": "Tongue-tingling heat, not for the faint hearted.", "price_modifier": 0.00, "calories": 41 },
+                { "id": "spice_medium", "name": "Medium", "description": "Heaps of flavour with just a flicker of fire.", "price_modifier": 0.00, "calories": 21 },
+                { "id": "spice_lemon_herb", "name": "Lemon & Herb", "description": "Zesty and tangy. A tastebud teaser.", "price_modifier": 0.00, "calories": 10 }
+              ]
+            },
+            {
+              "id": "opt_sides",
+              "title": "Choose your 2 sides",
+              "type": "multiple",
+              "max_choices": 2,
+              "choices": [
+                { "id": "side_chips", "name": "PERi-Salted Chips", "description": "Our famous, crispy chips.", "price_modifier": 0.00, "calories": 372 },
+                { "id": "side_rice", "name": "Spicy Rice", "description": "Fluffy, spicy rice.", "price_modifier": 0.00, "calories": 225 },
+                { "id": "side_summer_grains", "name": "Regular Summer Grains", "description": "A light and healthy option.", "price_modifier": 1.50, "calories": 180 },
+                { "id": "side_coleslaw", "name": "Coleslaw", "description": "Creamy and fresh.", "price_modifier": 0.00, "calories": 150 },
+                { "id": "side_corn", "name": "Corn on the Cob", "description": "Sweet and buttery.", "price_modifier": 0.00, "calories": 110 }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_2",
+      "name": "Starters",
+      "slug": "starters",
+      "items": [
+        {
+          "id": 201,
+          "name": "Halloumi Sticks & PERi-Honey",
+          "description": "Five chunky sticks of grilled halloumi with our PERi-Honey for dipping.",
+          "image_url": "https://www.nandos.co.uk/sites/default/files/blog/NANDO%27S%20HALLOUMI%20STICKS%20%20PERi%20HONEY%2037844%201932%20X%201932%20px%20srgb.jpg",
+          "base_price": 4.95,
+          "calories": 526,
+          "tags": ["vegetarian", "new"],
+          "customization_options": []
+        },
+        {
+          "id": 202,
+          "name": "Dare to share",
+          "description": "Choose any three starters to share. Perfect for groups.",
+          "image_url": "https://nandomenus.co.uk/wp-content/uploads/2024/02/image-1-dare-to-share.webp",
+          "base_price": 11.75,
+          "calories": 0,
+          "tags": [],
+          "customization_options": []
+        },
+        {
+          "id": 203,
+          "name": "Spicy Mixed Olives",
+          "description": "A mix of green and black olives marinated in chilli, garlic, and coriander.",
+          "image_url": "https://nandomenus.co.uk/wp-content/uploads/2024/02/spicy-mixed-olives-8.Image-16-9.083729.webp",
+          "base_price": 4.25,
+          "calories": 180,
+          "tags": ["vegetarian", "vegan"],
+          "customization_options": []
+        },
+        {
+          "id": 204,
+          "name": "PERi-PERi Nuts",
+          "description": "A crunchy mix of peanuts, cashews, and almonds, seasoned with PERi-PERi spice.",
+          "image_url": "https://nandomenus.co.uk/wp-content/uploads/2024/02/pe-ri-pe-ri-nuts-9.Image-16-9.084003.webp",
+          "base_price": 3.50,
+          "calories": 450,
+          "tags": ["vegetarian", "vegan"],
+          "customization_options": []
+        }
+      ]
+    },
+    {
+      "id": "cat_3",
+      "name": "Burgers, Pittas, Wraps",
+      "slug": "burgers-pittas-wraps",
+      "items": [
+        {
+          "id": 301,
+          "name": "PERi-PERi Chicken Burger",
+          "description": "A flame-grilled PERi-PERi chicken breast with lettuce, tomato, and mayo in a toasted Portuguese roll.",
+          "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeNSMfEACkvTHZChxGSh3jtLlXq9A5uUOa2A&s",
+          "base_price": 9.95,
+          "calories": 750,
+          "tags": [],
+          "customization_options": [
+            {
+              "id": "opt_spice",
+              "title": "How spicy?",
+              "type": "single",
+              "choices": [
+                { "id": "spice_extra_hot", "name": "Extra Hot", "description": "A sizzling hot spice, and then some.", "price_modifier": 0.00, "calories": 82 },
+                { "id": "spice_hot", "name": "Hot", "description": "Tongue-tingling heat, not for the faint hearted.", "price_modifier": 0.00, "calories": 41 },
+                { "id": "spice_medium", "name": "Medium", "description": "Heaps of flavour with just a flicker of fire.", "price_modifier": 0.00, "calories": 21 }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 302,
+          "name": "Halloumi PERi-PERi Burger",
+          "description": "Grilled halloumi slices with chilli jam, lettuce, and tomato in a toasted Portuguese roll.",
+          "image_url": "https://assets.nandos.com.au/Nandos-New-Zealand/images/_block2x/the-haloumi-burger-nandos.jpg",
+          "base_price": 8.50,
+          "calories": 680,
+          "tags": ["vegetarian"],
+          "customization_options": []
+        },
+        {
+          "id": 303,
+          "name": "PERi-PERi Chicken Pitta",
+          "description": "Tender chicken breast, grilled in your chosen spice, served in a warm pitta bread with crunchy slaw and chilli jam.",
+          "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmgZcThbYOipF8IKM5q1HHh-VVLfgHb7BUsw&s",
+          "base_price": 9.50,
+          "calories": 620,
+          "tags": [],
+          "customization_options": [
+            {
+              "id": "opt_spice",
+              "title": "How spicy?",
+              "type": "single",
+              "choices": [
+                { "id": "spice_extra_hot", "name": "Extra Hot", "description": "A sizzling hot spice, and then some.", "price_modifier": 0.00, "calories": 82 },
+                { "id": "spice_hot", "name": "Hot", "description": "Tongue-tingling heat, not for the faint hearted.", "price_modifier": 0.00, "calories": 41 },
+                { "id": "spice_medium", "name": "Medium", "description": "Heaps of flavour with just a flicker of fire.", "price_modifier": 0.00, "calories": 21 },
+                { "id": "spice_lemon_herb", "name": "Lemon & Herb", "description": "Zesty and tangy. A tastebud teaser.", "price_modifier": 0.00, "calories": 10 }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_4",
+      "name": "Salads & Bowls",
+      "slug": "salads-bowls",
+      "items": [
+        {
+          "id": 401,
+          "name": "Mediterranean Salad",
+          "description": "Mixed leaves, tomato, cucumber, olives, and feta cheese with a light vinaigrette. Add chicken for extra.",
+          "image_url": "https://assets.nandos.com.au/Nandos-New-Zealand/images/_block1x/Nandos-Mediterranean-Salad.jpg",
+          "base_price": 7.95,
+          "calories": 300,
+          "tags": ["vegetarian", "healthy"],
+          "customization_options": [
+            {
+              "id": "opt_add_chicken",
+              "title": "Add Chicken?",
+              "type": "single",
+              "choices": [
+                { "id": "add_chicken_yes", "name": "Yes, add chicken", "description": "Grilled PERi-PERi chicken breast.", "price_modifier": 4.00, "calories": 250 }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 402,
+          "name": "PERi-PERi Caesar Salad",
+          "description": "Crisp romaine lettuce, croutons, parmesan cheese, and creamy Caesar dressing, with flame-grilled PERi-PERi chicken.",
+          "image_url": "https://www.nandos.co.uk/sites/default/files/NANDO%27S_BLUE_METALLIC_CHICKEN_CAESER_SALAD_1932X1932_DEC22_M_0.jpg",
+          "base_price": 10.50,
+          "calories": 580,
+          "tags": ["signature"],
+          "customization_options": []
+        }
+      ]
+    },
+    {
+      "id": "cat_5",
+      "name": "Sides",
+      "slug": "sides",
+      "items": [
+        {
+          "id": 501,
+          "name": "PERi-Salted Chips",
+          "description": "Our famous, crispy chips, generously seasoned with PERi-Salt.",
+          "image_url": "https://nandomenus.co.uk/wp-content/uploads/2024/02/pe-ri-salted-chips-72.Image-16-9.084416.webp",
+          "base_price": 3.25,
+          "calories": 372,
+          "tags": ["vegetarian", "vegan"],
+          "customization_options": []
+        },
+        {
+          "id": 502,
+          "name": "Spicy Rice",
+          "description": "Fluffy long-grain rice infused with a hint of PERi-PERi spice and vegetables.",
+          "image_url": "https://hintofhelen.com/wp-content/uploads/2017/08/Nandos-Rice-Recipe-Hint-of-Helen-8.jpg",
+          "base_price": 3.25,
+          "calories": 225,
+          "tags": ["vegetarian", "vegan"],
+          "customization_options": []
+        },
+        {
+          "id": 503,
+          "name": "Coleslaw",
+          "description": "A creamy, tangy blend of shredded cabbage and carrots.",
+          "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVT4A5ICptjAXl_1vMd0I7ZNeoYm9nm5WVHw&s",
+          "base_price": 3.00,
+          "calories": 150,
+          "tags": ["vegetarian"],
+          "customization_options": []
+        },
+        {
+          "id": 504,
+          "name": "Corn on the Cob",
+          "description": "Sweet, tender corn on the cob, grilled and lightly buttered.",
+          "image_url": "https://nandomenus.co.uk/wp-content/uploads/2024/02/corn-on-the-cob-84.Image-16-9.085203.webp",
+          "base_price": 3.00,
+          "calories": 110,
+          "tags": ["vegetarian", "vegan"],
+          "customization_options": []
+        }
+      ]
+    },
+    {
+      "id": "cat_6",
+      "name": "Drinks",
+      "slug": "drinks",
+      "items": [
+        {
+          "id": 601,
+          "name": "Coca-Cola (Can)",
+          "description": "Classic Coca-Cola in a convenient can.",
+          "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFIIGAI7Lc3Amca-Liowhs7g4tbcJeMhOqag&s",
+          "base_price": 2.50,
+          "calories": 140,
+          "tags": [],
+          "customization_options": []
+        },
+        {
+          "id": 602,
+          "name": "Sparkling Water",
+          "description": "Refreshing sparkling water.",
+          "image_url": "https://nandomenus.co.uk/wp-content/uploads/2024/02/sparkling-water-145.Image-16-9.110239.webp",
+          "base_price": 2.00,
+          "calories": 0,
+          "tags": ["healthy"],
+          "customization_options": []
+        },
+        {
+          "id": 603,
+          "name": "Mango & Lime PERi-PERi Cooler",
+          "description": "Our signature blend of mango, lime, and a hint of PERi-PERi, blended into a refreshing cooler.",
+          "image_url": "https://m.media-amazon.com/images/I/61dfXpGwPJL._UF894,1000_QL80_.jpg",
+          "base_price": 4.00,
+          "calories": 200,
+          "tags": ["signature"],
+          "customization_options": []
+        }
+      ]
+    }
+  ]
 }
