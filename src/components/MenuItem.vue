@@ -1,14 +1,16 @@
 <script setup>
-
+  import { defineEmits } from 'vue';
     defineProps({
       item: Object,
     })
+
+    const emit = defineEmits(['view-menu-item'])
 
 </script>
 
 <template>
     
-  <section class="food_container p-4 md:p-6 bg-white rounded-lg shadow-md hover:shadow-lg flex justify-between items-center p-4  shadow-2xl max-w-[600px]">
+  <section @click="emit('view-menu-item', item)"  class="food_container p-4 md:p-6 bg-white rounded-lg shadow-md hover:shadow-lg flex justify-between items-center p-4  shadow-2xl max-w-[600px] cursor-pointer">
     <div class="card_items flex-grow">
         <h1 class="text-xl sm:text-2xl  text-gray-800 font-bold mb-2">{{item.name}}</h1>
         <p class="text-sm text-gray-600 mb-1">Calories: {{item.calories}}</p>

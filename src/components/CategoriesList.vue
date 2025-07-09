@@ -2,6 +2,10 @@
     import menuData from '@/foodData/menuData.json'
     import MenuItem from './MenuItem.vue';
     const foodCategories = menuData.categories;
+
+    function displayItem(item){
+        console.log(`${item.name} is clicked`);
+    }
 </script>
 
 <template>
@@ -24,7 +28,7 @@
             <div v-for="category in foodCategories" :key="category.id" class="pb-5">
                 <p class="text-3xl tracking-wide font-bold mb-6 text-gray-900">{{category.name}}</p>
                 <div class="food_items flex flex-wrap gap-4 mb-6 " >
-                   <MenuItem v-for="item in category.items" :item="item" class="bg-white rounded-lg shadow-md hover:shadow-lg"/>
+                   <MenuItem v-for="item in category.items" :item="item" class="bg-white rounded-lg shadow-md hover:shadow-lg" v-on:view-menu-item="displayItem"/>
                 </div>
             </div>
         </section>
