@@ -1,11 +1,24 @@
 <script setup>
     import menuData from '@/foodData/menuData.json'
+    import { ref } from 'vue';
     import MenuItem from './MenuItem.vue';
     const foodCategories = menuData.categories;
+    import ItemDetails from './ItemDetails.vue';
+
+    const choosenItem = ref(null);
+
+    const isOpen = ref(false);
 
     function displayItem(item){
-        console.log(`${item.name} is clicked`);
+        choosenItem.value = item;
+        isOpen.value = true;
     }
+
+    function closeTheModel(){
+        isOpen.value = false;
+
+    }
+
 </script>
 
 <template>
@@ -32,5 +45,7 @@
                 </div>
             </div>
         </section>
+        <ItemDetails v-if="isOpen" :item="choosenItem" v-on:close-model="closeTheModel"/>
+        
     </main>
 </template>
