@@ -18,7 +18,6 @@
         isOpen.value = false;
 
     }
-
 </script>
 
 <template>
@@ -45,7 +44,7 @@
                 </div>
             </div>
         </section>
-        <ItemDetails v-if="isOpen" :item="choosenItem" v-on:close-model="closeTheModel"/>
-        
+        <ItemDetails v-if="isOpen" :item="choosenItem" v-on:close-model="closeTheModel" v-on:add-to-basket="handleAddtoBasket"/>
+
     </main>
 </template>
