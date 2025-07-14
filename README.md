@@ -34,11 +34,11 @@ A responsive Vue.js application for browsing a restaurant's food menu, viewing i
     - [X] Price
 
 - [ ] **Detailed Item View (Route/Pop-up)**
-  - [ ] Show large product image
-  - [ ] Display item name, description, calories, and price
-  - [ ] Implement customization panels (accordion style):
-    - [ ] "How spicy?" choices
-    - [ ] "Choose your side" choices
+  - [X] Show large product image
+  - [X] Display item name, description, calories, and price
+  - [X] Implement customization panels (accordion style):
+    - [X] "How spicy?" choices
+    - [X] "Choose your side" choices
   - [ ] Add to Basket button (with quantity selector)
 
 - [ ] **Add to Basket Functionality**
