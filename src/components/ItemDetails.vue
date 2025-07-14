@@ -21,10 +21,9 @@
               <h3 class="bg-[#ebe6c8] text-gray-600 inline-block mb-2 mt-3 p-1 font-bold">{{ option.title}}</h3>
               <div class="choices_button " v-if="option.type==='single'">
                 <label  class="flex items-start mb-4" v-for="choice in option.choices" :key="choice.id">
-                   <input type="radio" :name="option.id" :value="choice.id" class="mr-2 mt-1" >
+                   <input v-model="userSelectedChoice" type="radio" :name="option.id" :value="choice.id" class="mr-2 mt-1" >
                    <span>
-                    <p class="name block font-bold text-[18px] tracking-wider" :class="{'text-[#441e0a]': choice.name === 'Extra Hot'
-                      , 'text-[#a40e25]' : choice.name === 'Hot', 'text-[#fc9530]' : choice.name === 'Medium', 'text-[#9dc62a]' : choice.name === 'Lemon & Herb', 'text-[#566128]' : choice.name === 'Plain...ish', 'text-[#53766e]' : choice.name === 'PERI-Tamer' }">{{ choice.name }}</p>
+                    <p class="name block font-bold text-[18px] tracking-wider" :class="spiceLevelColor(choice.name)">{{ choice.name }}</p>
                     <p class="description block text-sm text-gray-600"> {{ choice.description }}</p>
                     <p class="calories inline-block text-sm text-gray-600">Calories: {{ choice.calories}}</p>
                    </span>
@@ -49,5 +48,28 @@
 
     const emit = defineEmits(['close-model', 'add-to-basket']);
 
+
+    const spiceLevelColor = (name) =>{
+      switch(name){
+        case 'Extra Hot':
+          return 'text-[#441e0a]'
+
+        case 'Hot':
+          return 'text-[#a40e25]'
+
+        case 'Medium':
+          return 'text-[#fc9530]'
+
+        case 'Lemon & Herb':
+          return 'text-[#9dc62a]'
+
+        case 'Plain...ish':
+          return 'text-[#566128]'
+
+        default:
+        return ''
+      }
+
+    }
 
 </script>
