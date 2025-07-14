@@ -18,6 +18,9 @@
         isOpen.value = false;
 
     }
+
+    // creating reactive variable to store items in basket
+    const basketItems = ref([]);
 </script>
 
 <template>
