@@ -21,7 +21,7 @@
               <h3 class="bg-[#ebe6c8] text-gray-600 inline-block mb-2 mt-3 p-1 font-bold">{{ option.title}}</h3>
               <div class="choices_button " v-if="option.type==='single'">
                 <label  class="flex items-start mb-4" v-for="choice in option.choices" :key="choice.id">
-                   <input v-model="userSelectedChoice" type="radio" :name="option.id" :value="choice.id" class="mr-2 mt-1" >
+                   <input v-model="userSelectedChoices[option.id]" type="radio" :name="option.id" :value="choice.id" class="mr-2 mt-1" >
                    <span>
                     <p class="name block font-bold text-[18px] tracking-wider" :class="spiceLevelColor(choice.name)">{{ choice.name }}</p>
                     <p class="description block text-sm text-gray-600"> {{ choice.description }}</p>
@@ -34,15 +34,16 @@
         </div>
 
         <div class="text-center">
-        <button  @click="emit('add-to-basket', item)" class="flex mt-4  justify-center items-center w-full bg-black text-white uppercase tracking-wider p-2 hover:opacity-80">Add to Basket</button>
+          <!-- handling click on event -->
+        <button  @click="handleAddToBasket" class="flex mt-4  justify-center items-center w-full bg-black text-white uppercase tracking-wider p-2 hover:opacity-80">Add to Basket</button>
         </div>
       </div>
     </aside>
 </template>
 
 <script setup>
-    import { defineEmits, ref } from 'vue';
-    defineProps({
+    import { defineEmits, reactive, ref } from 'vue';
+   const props =  defineProps({
         item: Object,
     });
 
@@ -69,7 +70,18 @@
         default:
         return ''
       }
+    }
 
+    // for storing the selected option by user on different spice levels.
+    const userSelectedChoices = ref({});
+
+
+    // trigger when we click "add to basket"
+    // also for logging selected customization option, spice level and emits the object (including customization  to parent components
+    function handleAddToBasket(){
+        console.log("Selected choice on clikcing add to basket", userSelectedChoices.value);
+        emit('add-to-basket', {...props.item, userSelectedChoices: userSelectedChoices.value})
+        console.log(props.item);
     }
 
 </script>
