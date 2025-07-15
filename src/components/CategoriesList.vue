@@ -23,7 +23,22 @@
     const basketItems = ref([]);
 
     // add items to basketItems
+  function handleAddtoBasket(selectedItemswithCustomization){
+    console.log('The selected items are as follow: ', selectedItemswithCustomization)
 
+    const newBasketItems = {
+      basketItemId: Date.now() + Math.random().toString(36).substring(2,9),
+      id: selectedItemswithCustomization.id,
+      name: selectedItemswithCustomization.name,
+      base_url: selectedItemswithCustomization.base_url,
+      image_url: selectedItemswithCustomization.image_url,
+      price: selectedItemswithCustomization.base_price,
+      calories: selectedItemswithCustomization.calories,
+      quantity: 1,
+      selectedCustomization: selectedItemswithCustomization.userSelectedChoices,
+    }
+    basketItems.value.push(newBasketItems);
+  }
 </script>
 
 <template>
@@ -52,5 +67,6 @@
         </section>
         <ItemDetails v-if="isOpen" :item="choosenItem" v-on:close-model="closeTheModel" v-on:add-to-basket="handleAddtoBasket"/>
         <BasketSidebar :basketItem="basketItems"/>
+
     </main>
 </template>
