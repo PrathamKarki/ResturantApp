@@ -33,7 +33,7 @@ A responsive Vue.js application for browsing a restaurant's food menu, viewing i
     - [X] Short description
     - [X] Price
 
-- [ ] **Detailed Item View (Route/Pop-up)**
+- [X] **Detailed Item View (Route/Pop-up)**
   - [X] Show large product image
   - [X] Display item name, description, calories, and price
   - [X] Implement customization panels (accordion style):

@@ -10,7 +10,7 @@
         <p className="text-gray-600 mb-2 text-sm font-medium"> Calories: {{item.calories}}</p>
         <p className="text-gray-700 mb-4 leading-relaxed">{{item.description}} </p>
         <div className="bg-[#ebe6c8] inline p-2">
-          <span className="text-lg font-light text-gray-600">From</span>
+          <span className="text-lg font-bold text-gray-600">From</span>
           <span className="font-bold text-lg text-green-600"> £{{item.base_price}}</span>
         </div>
 
@@ -35,7 +35,7 @@
 
         <div class="text-center">
           <!-- handling click on event -->
-        <button  @click="handleAddToBasket" class="flex mt-4  justify-center items-center w-full bg-black text-white uppercase tracking-wider p-2 hover:opacity-80">Add to Basket</button>
+        <button  @click="emitAddToBasket" class="flex mt-4  justify-center items-center w-full bg-black text-white uppercase tracking-wider p-2 hover:opacity-80">Add to Basket</button>
         </div>
       </div>
     </aside>
@@ -78,7 +78,7 @@
 
     // trigger when we click "add to basket"
     // also for logging selected customization option, spice level and emits the object (including customization  to parent components
-    function handleAddToBasket(){
+    function emitAddToBasket(){
         console.log("Selected choice on clikcing add to basket", userSelectedChoices.value);
         emit('add-to-basket', {...props.item, userSelectedChoices: userSelectedChoices.value})
         console.log(props.item);

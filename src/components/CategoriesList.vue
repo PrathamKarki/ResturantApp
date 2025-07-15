@@ -4,7 +4,7 @@
     import MenuItem from './MenuItem.vue';
     const foodCategories = menuData.categories;
     import ItemDetails from './ItemDetails.vue';
-
+    import BasketSidebar from './BasketSidebar.vue';
     const choosenItem = ref(null);
 
     const isOpen = ref(false);
@@ -21,6 +21,9 @@
 
     // creating reactive variable to store items in basket
     const basketItems = ref([]);
+
+    // add items to basketItems
+
 </script>
 
 <template>
@@ -48,6 +51,6 @@
             </div>
         </section>
         <ItemDetails v-if="isOpen" :item="choosenItem" v-on:close-model="closeTheModel" v-on:add-to-basket="handleAddtoBasket"/>
-
+        <BasketSidebar :basketItem="basketItems"/>
     </main>
 </template>
