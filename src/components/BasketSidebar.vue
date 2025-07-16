@@ -1,15 +1,15 @@
 <template>
   <aside class="sidebar_component">
-    <div class="container fixed top-0 right-0 h-full w-80 bg-white shadow-lg p-6 overflow-y-auto z-50">
+    <div class="container fixed top-0 right-0 h-full w-80 bg-white shadow-lg p-6 overflow-y-auto z-50 flex flex-col justify-between ">
       <button @click="$emit('close')"  className=" text-2xl absolute top-3  rounded bg-red-500  right-4 text-black-600 hover:text-gray-70 rounded-full transition-colors duration-200  font-bold w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100"> &times; </button>
 
       <div v-if="basketItem.length === 0" class="flex items-center justify-center gap-2" >
         <ShoppingCart  size="30" fill="black"/>
-        <h1 class="text-lg font-bold tracking-wide">Your cart is empty </h1>
+        <h1 class="text-lg font-bold tracking-wide">Your Basket is empty </h1>
       </div>
 
       <div v-else>
-        <h1 class="text-center mb-3 font-bold tracking-wider">Your Cart Items:</h1>
+        <h1 class="text-center mb-3 font-bold tracking-wider">Your Basket Items:</h1>
 
         <div v-for="item in basketItem" :key="item.basketItemId" class="rounded-lg shadow-lg p-3">
           <h1 class="text-gray-700 mb-2 bg-[#ebe6c8] font-bold p-1 inline-block">{{ item.name }}</h1>
@@ -25,7 +25,7 @@
                  <p class="text-sm font-bold p-1 text-gray-700 bg-[#ebe6c8] flex items-center rounded-md">
                   Quantity:
                  <button @click="$emit('increase', item.basketItemId)"  class="ml-3 px-3 py-0.6 bg-red-500 text-white rounded-full ">+</button>
-                 <span class="mx-2 text-base font-semibold text-gray-800">{{ item.quantity }}</span>
+                 <span class="mx-2 text-base C">{{ item.quantity }}</span>
                  <button @click="$emit('decrease', item.basketItemId)" class="px-3 py-0.6 bg-red-500 text-white rounded-full  text-sm font-semibold">-</button>
                 </p>
             </div>
@@ -39,6 +39,10 @@
              </button>
             </div>
           </div>
+           <div class="p-3 flex items-center justify-between">
+              <p class="text-lg font-semibold  text-gray-800">Estimated total</p>
+              <span class="font-semibold text-lg text-gray-800">£ {{ totalPrice.toFixed(2) }}</span>
+            </div>
       </div>
     </div>
   </aside>
@@ -51,6 +55,7 @@ import { Trash2Icon } from 'lucide-vue-next';
 import menuData from "@/foodData/menuData.json";
  const props = defineProps({
    basketItem: Array,
+   totalPrice: Number,
    default: () => []
  })
 

@@ -1,6 +1,6 @@
 <script setup>
     import menuData from '@/foodData/menuData.json'
-    import { ref } from 'vue';
+    import { ref, computed } from 'vue';
     import MenuItem from './MenuItem.vue';
     const foodCategories = menuData.categories;
     import ItemDetails from './ItemDetails.vue';
@@ -75,6 +75,13 @@
       }
     }
 
+     // computed property to get the total of the products
+ const totalPrice = computed(()=>{
+    return basketItems.value.reduce((total, item)=>{
+      return total + item.price * item.quantity
+    }, 0);
+ });
+
 </script>
 
 <template>
@@ -109,7 +116,7 @@
         <ItemDetails v-if="isOpen" :item="choosenItem" v-on:close-model="closeTheModel" v-on:add-to-basket="handleAddtoBasket"/>
         <BasketSidebar v-if="isBasketOpen" :basketItem="basketItems" v-on:close="isBasketOpen = false"
         v-on:increase="increaseQuantity"  v-on:decrease="decreaseQuantity"
-        v-on:remove="removeItem"/>
+        v-on:remove="removeItem" :totalPrice="totalPrice"/>
 
     </main>
 </template>
