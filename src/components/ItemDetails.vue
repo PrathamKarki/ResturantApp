@@ -31,7 +31,8 @@
                         choice.name === 'Medium' ? 3 :
                         choice.name === 'Lemon & Herb' ? 2 :
                         choice.name === 'Plain...ish' ? 1 : 0
-                      )" :key="n" size="16" color="red" fill="red" class="mr-1"/>
+                      )" :key="n" size="16"  :fill="choice.name === 'Extra Hot'? '#b2222'
+                      : choice.name === 'Hot' ? '#ff4500': choice.name === 'Medium' ? '#ff8c00' : choice.name === 'Lemon & Herb' ? '#9dc62a' : '#ccc'  " class="mr-1"/>
                     </div>
                     <p class="description block text-sm text-gray-600"> {{ choice.description }}</p>
                     <p class="calories inline-block text-sm text-gray-600">Calories: {{ choice.calories}}</p>
