@@ -24,6 +24,15 @@
                    <input v-model="userSelectedChoices[option.id]" type="radio" :name="option.id" :value="choice.id" class="mr-2 mt-1" >
                    <span>
                     <p class="name block font-bold text-[18px] tracking-wider" :class="spiceLevelColor(choice.name)">{{ choice.name }}</p>
+
+                    <div class="fires  flex">
+                        <FlameIcon v-for="n in (choice.name === 'Extra Hot' ? 5:
+                        choice.name === 'Hot' ? 4 :
+                        choice.name === 'Medium' ? 3 :
+                        choice.name === 'Lemon & Herb' ? 2 :
+                        choice.name === 'Plain...ish' ? 1 : 0
+                      )" :key="n" size="16" color="red" fill="red" class="mr-1"/>
+                    </div>
                     <p class="description block text-sm text-gray-600"> {{ choice.description }}</p>
                     <p class="calories inline-block text-sm text-gray-600">Calories: {{ choice.calories}}</p>
                    </span>
@@ -46,6 +55,7 @@
 
 <script setup>
     import { defineEmits, reactive, ref } from 'vue';
+    import { FlameIcon } from 'lucide-vue-next';
    const props =  defineProps({
         item: Object,
     });
