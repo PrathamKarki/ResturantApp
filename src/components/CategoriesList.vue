@@ -45,6 +45,27 @@
   // reactivity for opening basket
   const isBasketOpen = ref(false);
 
+  //function to increase basket item
+    function increaseQuantity(id){
+      const item = basketItems.value.find(item => item.basketItemId === id)
+      if(item){
+
+        if(item.quantity < 50){
+          item.quantity++;
+        }
+      }
+    }
+
+
+  //function to decrease basket item
+    function decreaseQuantity(id){
+      const item = basketItems.value.find(item => item.basketItemId === id);
+      if(item){
+        if(item.quantity > 1){
+          item.quantity--;
+        }
+      }
+    }
 
 </script>
 
@@ -78,7 +99,8 @@
             </div>
         </section>
         <ItemDetails v-if="isOpen" :item="choosenItem" v-on:close-model="closeTheModel" v-on:add-to-basket="handleAddtoBasket"/>
-        <BasketSidebar v-if="isBasketOpen" :basketItem="basketItems" v-on:close="isBasketOpen = false" />
+        <BasketSidebar v-if="isBasketOpen" :basketItem="basketItems" v-on:close="isBasketOpen = false"
+        v-on:increase="increaseQuantity"  v-on:decrease="decreaseQuantity"/>
 
     </main>
 </template>
