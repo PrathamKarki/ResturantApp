@@ -39,12 +39,12 @@ A responsive Vue.js application for browsing a restaurant's food menu, viewing i
   - [X] Implement customization panels (accordion style):
     - [X] "How spicy?" choices
     - [X] "Choose your side" choices
-  - [ ] Add to Basket button (with quantity selector)
+  - [X] Add to Basket button (with quantity selector)
 
-- [ ] **Add to Basket Functionality**
+- [X] **Add to Basket Functionality**
   - [ ] Add item to basket from main menu
-  - [ ] Add item to basket from detailed view
-  - [ ] Manage item quantity when adding to basket
+  - [X] Add item to basket from detailed view
+  - [X] Manage item quantity when adding to basket
 
 ---
 
@@ -53,14 +53,14 @@ A responsive Vue.js application for browsing a restaurant's food menu, viewing i
 > After the basic flow works, add basket interaction.
 
 - [ ] **Basket Page/Screen**
-  - [ ] View list of added items
+  - [X] View list of added items
   - [ ] Sticky checkout header showing running total
   - [ ] Upsell carousel: Suggested items ("Don't forget these...")
 
-- [ ] **Basket Item Controls**
+- [X] **Basket Item Controls**
   - [ ] Edit Item customization
-  - [ ] Remove Item (trash icon)
-  - [ ] Quantity Selector (+ and - buttons)
+  - [X] Remove Item (trash icon)
+  - [X] Quantity Selector (+ and - buttons)
 
 ---
 
