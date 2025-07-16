@@ -21,7 +21,7 @@
                 {{ getChoiceLabel(optionId, choiceId) }}
               </p>
             </div>
-            <div class="mt-4 space-y-2">
+            <div class="mt-4 space-y-2 mb-2">
                  <p class="text-sm font-bold p-1 text-gray-700 bg-[#ebe6c8] flex items-center rounded-md">
                   Quantity:
                  <button @click="$emit('increase', item.basketItemId)"  class="ml-3 px-3 py-0.6 bg-red-500 text-white rounded-full ">+</button>
@@ -29,9 +29,15 @@
                  <button @click="$emit('decrease', item.basketItemId)" class="px-3 py-0.6 bg-red-500 text-white rounded-full  text-sm font-semibold">-</button>
                 </p>
             </div>
-            <p class="text-base font-bold p-1 text-gray-800">Total:
+
+            <div class="total_and_delete_icon flex items-center justify-between">
+              <p class="text-base font-bold p-1 text-gray-800">Total:
               <span class="font-bold text-lg">£{{ (item.quantity * item.price).toFixed(2) }}</span>
-            </p>
+             </p>
+             <button @click="$emit('remove', item.basketItemId)" class=" hover:text-red-800 p-1 rounded-full">
+                  <Trash2Icon fill="white" size="20"/>
+             </button>
+            </div>
           </div>
       </div>
     </div>
@@ -41,6 +47,7 @@
 
 <script setup>
 import { ShoppingCart } from 'lucide-vue-next';
+import { Trash2Icon } from 'lucide-vue-next';
 import menuData from "@/foodData/menuData.json";
  const props = defineProps({
    basketItem: Array,

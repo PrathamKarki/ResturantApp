@@ -67,6 +67,14 @@
       }
     }
 
+    //function to delete a item completely
+    function removeItem(id){
+      const index = basketItems.value.findIndex(item => item.basketItemId === id);
+      if(index !== -1){
+        basketItems.value.splice(index, 1);
+      }
+    }
+
 </script>
 
 <template>
@@ -100,7 +108,8 @@
         </section>
         <ItemDetails v-if="isOpen" :item="choosenItem" v-on:close-model="closeTheModel" v-on:add-to-basket="handleAddtoBasket"/>
         <BasketSidebar v-if="isBasketOpen" :basketItem="basketItems" v-on:close="isBasketOpen = false"
-        v-on:increase="increaseQuantity"  v-on:decrease="decreaseQuantity"/>
+        v-on:increase="increaseQuantity"  v-on:decrease="decreaseQuantity"
+        v-on:remove="removeItem"/>
 
     </main>
 </template>
