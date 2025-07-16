@@ -21,6 +21,17 @@
                 {{ getChoiceLabel(optionId, choiceId) }}
               </p>
             </div>
+            <div class="mt-4 space-y-2">
+                 <p class="text-sm font-bold p-1 text-gray-700 bg-[#ebe6c8] flex items-center rounded-md">
+                  Quantity:
+                 <button class="ml-3 px-3 py-0.6 bg-red-500 text-white rounded-full ">+</button>
+                 <span class="mx-2 text-base font-semibold text-gray-800">{{ item.quantity }}</span>
+                 <button class="px-3 py-0.6 bg-red-500 text-white rounded-full  text-sm font-semibold">-</button>
+                </p>
+            </div>
+            <p class="text-base font-bold p-1 text-gray-800">Total:
+              <span class="font-bold text-lg">£{{ (item.quantity * item.price).toFixed(2) }}</span>
+            </p>
           </div>
       </div>
     </div>
