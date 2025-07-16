@@ -5,6 +5,7 @@
     const foodCategories = menuData.categories;
     import ItemDetails from './ItemDetails.vue';
     import BasketSidebar from './BasketSidebar.vue';
+    import { ShoppingCart } from 'lucide-vue-next';
     const choosenItem = ref(null);
 
     const isOpen = ref(false);
@@ -40,6 +41,11 @@
 
     isOpen.value = false;
   }
+
+  // reactivity for opening basket
+  const isBasketOpen = ref(false);
+
+
 </script>
 
 <template>
@@ -53,6 +59,11 @@
                             <li v-for="category in  foodCategories" :key="category.id" class="px-5 py-3 font-semibold cursor-pointer hover:text-red-400 transition-colors duration-200">{{ category.name }}</li>
                          </ul>
                     </div>
+
+                    <button @click="isBasketOpen = !isBasketOpen" class="text-white hover:text-red-400" >
+                      <ShoppingCart  size="50"/>
+                    </button>
+
                 </div>
             </div>
         </header>
@@ -67,7 +78,7 @@
             </div>
         </section>
         <ItemDetails v-if="isOpen" :item="choosenItem" v-on:close-model="closeTheModel" v-on:add-to-basket="handleAddtoBasket"/>
-        <BasketSidebar :basketItem="basketItems"/>
+        <BasketSidebar v-if="isBasketOpen" :basketItem="basketItems" v-on:close="isBasketOpen = false" />
 
     </main>
 </template>

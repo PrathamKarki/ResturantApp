@@ -1,6 +1,7 @@
 <template>
   <aside class="sidebar_component">
     <div class="container fixed top-0 right-0 h-full w-80 bg-white shadow-lg p-6 overflow-y-auto z-50">
+      <button @click="$emit('close')"  className=" text-2xl absolute top-3  rounded bg-red-500  right-4 text-black-600 hover:text-gray-70 rounded-full transition-colors duration-200  font-bold w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100"> &times; </button>
 
       <div v-if="basketItem.length === 0" class="flex items-center justify-center gap-2" >
         <ShoppingCart  size="30" fill="black"/>
