@@ -29,6 +29,9 @@
                    </span>
                 </label>
               </div>
+
+              <!-- multiple-choice customization -->
+
             </div>
           </div>
         </div>
@@ -82,6 +85,7 @@
         console.log("Selected choice on clikcing add to basket", userSelectedChoices.value);
         emit('add-to-basket', {...props.item, userSelectedChoices: userSelectedChoices.value})
         console.log(props.item);
+        console.log(userSelectedChoices.value);
     }
 
 </script>

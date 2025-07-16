@@ -30,14 +30,15 @@
       basketItemId: Date.now() + Math.random().toString(36).substring(2,9),
       id: selectedItemswithCustomization.id,
       name: selectedItemswithCustomization.name,
-      base_url: selectedItemswithCustomization.base_url,
       image_url: selectedItemswithCustomization.image_url,
       price: selectedItemswithCustomization.base_price,
       calories: selectedItemswithCustomization.calories,
       quantity: 1,
-      selectedCustomization: selectedItemswithCustomization.userSelectedChoices,
+      userSelectedChoices: selectedItemswithCustomization.userSelectedChoices,
     }
     basketItems.value.push(newBasketItems);
+
+    isOpen.value = false;
   }
 </script>
 
