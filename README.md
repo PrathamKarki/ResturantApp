@@ -68,9 +68,9 @@ A responsive Vue.js application for browsing a restaurant's food menu, viewing i
 
 > Finalize the basic order flow.
 
-- [ ] **Simple Checkout Form**
-  - [ ] User details (optional) or confirmation button
-  - [ ] Confirmation message after "Checkout"
+- [X] **Simple Checkout Form**
+  - [X] User details (optional) or confirmation button
+  - [X] Confirmation message after "Checkout"
 
 ---
 
