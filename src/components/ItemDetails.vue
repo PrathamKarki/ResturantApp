@@ -57,6 +57,14 @@
 <script setup>
     import { defineEmits, reactive, ref } from 'vue';
     import { FlameIcon } from 'lucide-vue-next';
+    import { useToast } from 'vue-toastification';
+
+    const toast = useToast();
+
+    function confirmAddToCart(){
+      toast.success('Food added to the Cart');
+    }
+
    const props =  defineProps({
         item: Object,
     });
@@ -97,6 +105,7 @@
         emit('add-to-basket', {...props.item, userSelectedChoices: userSelectedChoices.value})
         console.log(props.item);
         console.log(userSelectedChoices.value);
+        confirmAddToCart();
     }
 
 </script>
