@@ -2,6 +2,8 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
+import Toast from 'vue-toastification'
+import 'vue-toastification/dist/index.css'
 
 import { createWebHistory, createRouter } from 'vue-router'
 
@@ -20,4 +22,5 @@ const router = createRouter({
 
 const app = createApp(App)
 app.use(router);
+app.use(Toast);
 app.mount('#app');

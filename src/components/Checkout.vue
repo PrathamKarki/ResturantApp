@@ -7,7 +7,7 @@
     <h1 class="Checkout text-2xl tracking-wider font-bold ">Checkout</h1>
   </div>
 
-  <form action="#" class="space-y-4" @submit.prevent="handleSubmit">
+  <form action="#" class="space-y-4" @submit.prevent="onSubmit">
       <div class="ml-1 mb-5">
            <label for="name" class=" font-semibold mb-3 block gap-2 flex items-center">Name
             <User color="gray"/>
@@ -20,7 +20,7 @@
           <label for="email" class="font-semibold mb-3 block flex gap-2 items-center">Email
             <Mail color="gray"/>
           </label>
-          <input type="email" id="address" name="address" v-model="email" class="w-full border px-2 py-1">
+          <input type="email" id="email" name="email" v-model="email" class="w-full border px-2 py-1">
           <p class="text-red-500 text-sm mt-2">{{ emailError }}</p>
 
       </div>
@@ -49,6 +49,7 @@
 
 <script setup>
   import { useRouter } from 'vue-router';
+  import { useToast } from 'vue-toastification';
   import { Phone, StepBack, Mail, User, House } from 'lucide-vue-next';
   import { useForm, useField } from 'vee-validate';
   import * as yup from 'yup';
@@ -56,6 +57,8 @@
 
 
   const router = useRouter();
+
+  const toast = useToast();
 
   function goBack(){
     router.push('/')
@@ -82,6 +85,11 @@ const schema = yup.object({
 const { handleSubmit } = useForm({
   validationSchema: schema
 });
+
+const onSubmit = handleSubmit((values)=>{
+  console.log(values);
+  toast.success('Order successful!');
+})
 
 const { value: name, errorMessage: nameError } = useField('name');
 const { value: email, errorMessage: emailError } = useField('email');
