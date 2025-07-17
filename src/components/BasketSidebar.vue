@@ -43,6 +43,10 @@
               <p class="text-lg font-semibold  text-gray-800">Estimated total</p>
               <span class="font-semibold text-lg text-gray-800">£ {{ totalPrice.toFixed(2) }}</span>
             </div>
+
+            <div class="checkout_section p-3 ">
+              <button class="checkout mt-4 w-full bg-red-500 text-white p-2 rounded cursor-pointer hover:opacity-80 active:bg-black">Checkout</button>
+            </div>
       </div>
     </div>
   </aside>
