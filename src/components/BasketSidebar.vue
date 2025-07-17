@@ -45,7 +45,7 @@
             </div>
 
             <div class="checkout_section p-3 ">
-              <button class="checkout mt-4 w-full bg-red-500 text-white p-2 rounded cursor-pointer hover:opacity-80 active:bg-black">Checkout</button>
+              <button @click="$emit('proceed-to-checkout')" class="checkout mt-4 w-full bg-red-500 text-white p-2 rounded cursor-pointer hover:opacity-80 active:bg-black">Checkout</button>
             </div>
       </div>
     </div>

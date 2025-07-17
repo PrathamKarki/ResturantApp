@@ -82,6 +82,12 @@
     }, 0);
  });
 
+
+ //function to implement routes to go to checkout page
+ function goToCheckout(){
+  
+ }
+
 </script>
 
 <template>
@@ -116,7 +122,8 @@
         <ItemDetails v-if="isOpen" :item="choosenItem" v-on:close-model="closeTheModel" v-on:add-to-basket="handleAddtoBasket"/>
         <BasketSidebar v-if="isBasketOpen" :basketItem="basketItems" v-on:close="isBasketOpen = false"
         v-on:increase="increaseQuantity"  v-on:decrease="decreaseQuantity"
-        v-on:remove="removeItem" :totalPrice="totalPrice"/>
+        v-on:remove="removeItem" :totalPrice="totalPrice"
+        v-on:proceed-to-checkout="goToCheckout"/>
 
     </main>
 </template>
