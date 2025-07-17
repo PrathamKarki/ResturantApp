@@ -6,7 +6,10 @@
     import ItemDetails from './ItemDetails.vue';
     import BasketSidebar from './BasketSidebar.vue';
     import { ShoppingCart } from 'lucide-vue-next';
+    import { useRouter } from 'vue-router';
     const choosenItem = ref(null);
+
+    const router = useRouter();
 
     const isOpen = ref(false);
 
@@ -85,7 +88,7 @@
 
  //function to implement routes to go to checkout page
  function goToCheckout(){
-  
+  router.push ('/Checkout');
  }
 
 </script>
@@ -124,6 +127,5 @@
         v-on:increase="increaseQuantity"  v-on:decrease="decreaseQuantity"
         v-on:remove="removeItem" :totalPrice="totalPrice"
         v-on:proceed-to-checkout="goToCheckout"/>
-
     </main>
 </template>
