@@ -4,7 +4,7 @@ import CategoriesList from './components/CategoriesList.vue';
 </script>
 
 <template>
-  <CategoriesList/>
+   <Router-view/>
 </template>
 
 <style scoped>
