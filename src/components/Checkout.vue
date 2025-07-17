@@ -1,4 +1,5 @@
 <template>
+<div class="py-7">
 <div class="container p-8 max-w-md mx-auto border-1">
 
   <div class="header flex gap-3 items-center mb-5">
@@ -12,13 +13,16 @@
             <User color="gray"/>
            </label>
            <input type="text" id="name" name="name" v-model="name" class="w-full border px-2 py-1">
-      </div>
+           <p class="text-red-500 text-sm mt-2">{{ nameError }}</p>
+       </div>
 
       <div class="ml-1 mb-5 ">
           <label for="email" class="font-semibold mb-3 block flex gap-2 items-center">Email
             <Mail color="gray"/>
           </label>
           <input type="email" id="address" name="address" v-model="email" class="w-full border px-2 py-1">
+          <p class="text-red-500 text-sm mt-2">{{ emailError }}</p>
+
       </div>
 
       <div class="ml-1 mb-5">
@@ -26,6 +30,7 @@
           <Phone size="20" color="gray"/>
         </label>
         <input type="tel" id="phone" name="phone" v-model="phone" class="w-full border px-2 py-1" required >
+        <p class="text-red-500 text-sm mt-2">{{ phoneError }}</p>
       </div>
 
       <div class="ml-1 mb-5">
@@ -33,22 +38,22 @@
           <House color="gray"/>
         </label>
         <textarea  id="address" name="address" v-model="address" class="w-full border px-2 py-1" required> </textarea>
+        <p class="text-red-500 text-sm mt-2">{{ addressError }}</p>
       </div>
 
       <button class="place_order w-full px-2 py-2 bg-black text-white hover:opacity-80 cursor-pointer" type="submit">Confirm Order</button>
   </form>
+</div>
 </div>
 </template>
 
 <script setup>
   import { useRouter } from 'vue-router';
   import { Phone, StepBack, Mail, User, House } from 'lucide-vue-next';
-  import {ref} from 'vue';
+  import { useForm, useField } from 'vee-validate';
+  import * as yup from 'yup';
 
-  const name = ref('');
-  const address = ref('');
-  const phone = ref('');
-  const email = ref('');
+
 
   const router = useRouter();
 
@@ -56,19 +61,30 @@
     router.push('/')
   }
 
-  function handleSubmit(){
-    console.log('Submitted:', {
-    name: name.value,
-    address: address.value,
-    phone: phone.value,
-  });
+//  use of Yup schema for form validation
 
-  if (!name.value || !address.value || !phone.value) {
-    alert('Please fill in all fields');
-    return;
-  }
+const schema = yup.object({
+  name: yup.string()
+        .required('Name is required.')
+        .min(5, 'Name must be at least 5 characters')
+        .max(20, 'Name must be less than 20 characters'),
+  email: yup.string().email('Invalid email').required('Email is required'),
+  address: yup.string().required('Address is required')
+  .min(5, 'Address must be at least 5 characters')
+  .max(50, 'Address must be less than 50 characters'),
+  phone: yup
+        .string('Phone number is required')
+        .max(10, 'Phone must be at least 10 digits')
+        .min(10, 'Phone number must be at least 10 digits')
+        .matches(/^[0-9]+$/, 'Phone number must contain only digits')
+})
 
-  alert('Form submitted successfully!');
-  }
+const { handleSubmit } = useForm({
+  validationSchema: schema
+});
 
+const { value: name, errorMessage: nameError } = useField('name');
+const { value: email, errorMessage: emailError } = useField('email');
+const { value: address, errorMessage: addressError } = useField('address');
+const { value: phone, errorMessage: phoneError } = useField('phone');
 </script>
