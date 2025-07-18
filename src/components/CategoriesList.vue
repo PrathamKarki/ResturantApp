@@ -41,8 +41,10 @@
       userSelectedChoices: selectedItemswithCustomization.userSelectedChoices,
     }
     basketItems.value.push(newBasketItems);
+    basketCount.value++;
 
     isOpen.value = false;
+
   }
 
   // reactivity for opening basket
@@ -76,6 +78,7 @@
       if(index !== -1){
         basketItems.value.splice(index, 1);
       }
+      basketCount.value--;
     }
 
      // computed property to get the total of the products
@@ -91,22 +94,26 @@
   router.push ('/Checkout');
  }
 
+
+ const basketCount = ref(0);
+
 </script>
 
 <template>
     <main>
         <header class="header p-2 bg-gray-800">
             <div class="header_contents max-w-screen-xl mx-auto py-3 ">
-                <div class="categories_container">
-                    <div class="flex flex-col md:flex-row items-center  text-white align-center gap-4 md:gap-10">
+                <div class="categories_container ">
+                    <div class="flex flex-col md:flex-row items-center  text-white align-center gap-4 md:gap-10 mb-2 ">
                         <h1 class="bg-[#d31c29] px-5 py-3 font-semibold uppercase  bg-red-700 hover:bg-red-800 transition-colors duration-300 px-5 py-2 font-bold uppercase text-lg md:text-xl rounded-md shadow-md">Extra hot Lunch Deals</h1>
                          <ul class="list_of_categories flex flex-wrap justify-center md:justify-start gap-4 md:gap-6">
                             <li v-for="category in  foodCategories" :key="category.id" class="px-5 py-3 font-semibold cursor-pointer hover:text-red-400 transition-colors duration-200">{{ category.name }}</li>
                          </ul>
                     </div>
 
-                    <button @click="isBasketOpen = !isBasketOpen" class="text-white hover:text-red-400" >
-                      <ShoppingCart  size="50"/>
+                    <button @click="isBasketOpen = !isBasketOpen" class="text-white hover:text-red-400 relative" >
+                      <ShoppingCart  size="50" class="mb-1"/>
+                      <div class="rounded w-4 h-5 bg-red-500 flex items-center justify-center rounded-lg absolute top-0 left-10">{{ basketCount }}</div>
                     </button>
 
                 </div>
