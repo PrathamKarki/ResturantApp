@@ -12,7 +12,7 @@
            <label for="name" class=" font-semibold mb-3 block gap-2 flex items-center">Name
             <User color="gray"/>
            </label>
-           <input type="text" id="name" name="name" v-model="name" class="w-full border px-2 py-1">
+           <input type="text" id="name" name="name" v-model="name" class="w-full border px-2 py-1" required>
            <p class="text-red-500 text-sm mt-2">{{ nameError }}</p>
        </div>
 
@@ -20,7 +20,7 @@
           <label for="email" class="font-semibold mb-3 block flex gap-2 items-center">Email
             <Mail color="gray"/>
           </label>
-          <input type="email" id="email" name="email" v-model="email" class="w-full border px-2 py-1">
+          <input type="email" id="email" name="email" v-model="email" class="w-full border px-2 py-1" required>
           <p class="text-red-500 text-sm mt-2">{{ emailError }}</p>
 
       </div>
