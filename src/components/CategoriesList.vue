@@ -40,9 +40,20 @@
       quantity: 1,
       userSelectedChoices: selectedItemswithCustomization.userSelectedChoices,
     }
-    basketItems.value.push(newBasketItems);
-    basketCount.value++;
 
+    // checking for duplicate cart items to be display as one with increase in quantity
+    const duplicateItem = basketItems.value.find((item)=>{
+      /*
+        object like {obj: 1} === {obj: 1} can't be done directly so we use stringify
+      */
+      return item.id === newBasketItems.id && JSON.stringify(item.userSelectedChoices) === JSON.stringify(newBasketItems.userSelectedChoices);
+    });
+      if(duplicateItem){
+        duplicateItem.quantity++;
+      } else{
+        basketItems.value.push(newBasketItems);
+        basketCount.value++;
+      }
     isOpen.value = false;
 
   }
@@ -111,7 +122,7 @@
                          </ul>
                     </div>
 
-                    <button @click="isBasketOpen = !isBasketOpen" class="text-white hover:text-red-400 relative" >
+                    <button @click="isBasketOpen = !isBasketOpen" class="text-white  relative" >
                       <ShoppingCart  size="50" class="mb-1"/>
                       <div class="rounded w-4 h-5 bg-red-500 flex items-center justify-center rounded-lg absolute top-0 left-10">{{ basketCount }}</div>
                     </button>
