@@ -9,10 +9,12 @@ import { createWebHistory, createRouter } from 'vue-router'
 
 import CategoriesList from './components/CategoriesList.vue'
 import Checkout from './components/Checkout.vue'
+import ConfirmationPanel from './components/ConfirmationPanel.vue'
 
 const routes = [
   {path:'/', component: CategoriesList},
-  {path: '/Checkout', component: Checkout}
+  {path: '/Checkout', component: Checkout},
+  {path: '/ConfirmationPanel', component: ConfirmationPanel}
 ]
 
 const router = createRouter({

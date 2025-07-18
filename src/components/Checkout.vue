@@ -89,6 +89,7 @@ const { handleSubmit } = useForm({
 const onSubmit = handleSubmit((values)=>{
   console.log(values);
   toast.success('Order successful!');
+  router.push()
 })
 
 const { value: name, errorMessage: nameError } = useField('name');
